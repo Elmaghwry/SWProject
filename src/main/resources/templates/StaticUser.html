@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Product </title>
+</head>
+<body>
+
+<!--/*@thymesVar id="product" type=""*/-->
+<form method="post" th:action="@{/Home}" th:object="${user}">
+    <div>
+        <p> Name : <span th:text="${user.Name}"></span></p><br/>
+        <p> Num Of Buy : <span th:text="${user.numOfBuy}"></span></p><br/>
+        <br/>
+        <a href="/LogOut"> LogOut</a>
+        <br/>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>view history </title>
+</head>
+<body>
+
+<dev th:each="history : ${Historical}">
+    <!--/*@thymesVar id="product" type=""*/-->
+    <a th:href="@{/Undo(id1=${history.id},id2=${history.Type})}" th:id="${history.id}" th:name="ID"> <span th:text="${history.Type}"> </span><span th:text="${history.Name}"> </span> </a>
+    <br/>
+</dev>
+<br/>
+<br/>
+<a href="/LogOut"> LogOut</a>
+<br/>
+</body>
+</html>

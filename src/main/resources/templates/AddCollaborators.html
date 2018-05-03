@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Add collaborators form</title>
+</head>
+<body>
+<!--/*@thymesVar id="userEntity" type=""*/-->
+<form method= "post"  th:action="@{/AddCollaborators}" th:object="${userEntity}">
+
+    Email    : <input type="text" th:field="*{Email}"/>
+    <br/>
+    <br/>
+    <input type="submit" value="AddCollaborators"/>
+    <!--a th:href="@{/AddCollaborators(id=${userEntity.Email})}"th:id="${userEntity.id}" th:name="ID"> Add Collaborators  </a-->
+    <br/>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>my stores</title>
+</head>
+<body>
+
+<dev th:each="store : ${Store}">
+    <!--/*@thymesVar id="product" type=""*/-->
+    <a th:href="@{/AddProductToStore(id1=${store.id},id2=${ID},id3=${store.Name})}" th:id="${store.id}"  th:name="ID"> <span th:text = "${store.Name}"> </span>  </a>
+    <br/>
+</dev>
+<br/>
+<br/>
+<a href="/LogOut"> LogOut</a>
+<br/>
+</body>
+</html>

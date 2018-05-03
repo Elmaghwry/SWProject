@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+</head>
+<body>
+
+<dev th:each="product : ${Product}">
+    <!--/*@thymesVar id="product" type=""*/-->
+    <a th:href="@{/SpecificProduct(id=${product.id})}" th:id="${product.id}" th:name="ID"> <span th:text = "${product.Name}"> </span> </a>
+    <br/>
+</dev>
+<br/>
+<br/>
+<a href="/LogOut"> LogOut</a>
+<br/>
+</body>
+</html>

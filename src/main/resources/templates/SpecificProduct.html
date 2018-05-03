@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Product </title>
+</head>
+<body>
+
+<!--/*@thymesVar id="product" type=""*/-->
+<form method="post" th:action="@{/BuyProduct(id=${product.id})}"th:id="${product.id}" th:name="ID" th:object="${product}">
+    <div>
+        <p> Name : <span th:text="${product.Name}"></span></p><br/>
+        <p> Price : <span th:text="${product.Price}"></span> </p> <br/>
+        <p> NumOfViews : <span th:text="${product.NumOfViews}"></span></p><br/>
+        <a th:href="@{/BuyProduct(id=${product.id})}"th:id="${product.id}" th:name="ID"> Buy </a>
+        <br/>
+        <a th:href="@{/getSpceficStore(id=${product.id})}"th:id="${product.id}" th:name="ID"> Add product to store </a>
+        <br/>
+        <a th:href="@{/AddToCart(id=${product.id})}"th:id="${product.id}" th:name="ID"> Add to card </a>
+        <br/>
+        <br/>
+        <a href="/LogOut"> LogOut</a>
+        <br/>
+    </div>
+</form>
+
+</body>
+</html>

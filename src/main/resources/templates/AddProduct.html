@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Add Product</title>
+</head>
+<body>
+<!--/*@thymesVar id="productEntity" type=""*/-->
+<form method= "post"  th:action="@{/AddProducts}" th:object="${productEntity}">
+    Name     : <input type = "text" th:field  = "*{Name}"/>
+    <br/>
+    Price    : <input type="text" th:field="*{Price}"/>
+    <br/>
+    Category : <input type="text" th:field="*{Category}"/>
+    <br/>
+    Brand     : <input type = "text" th:field  = "*{Brand}"/>
+    <br/>
+
+    <input type="submit" value="ADD"/>
+    <br/>
+    <br/>
+    <a href="/LogOut"> LogOut</a>
+</form>
+</body>
+</html>

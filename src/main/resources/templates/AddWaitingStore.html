@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Add store form</title>
+</head>
+<body>
+<!--/*@thymesVar id="store" type=""*/-->
+<form method= "post"  th:action="@{/AddWaitingStore}" th:object="${waitingStores}">
+    Name of store    : <input type = "text" th:field  = "*{Name}"/>
+    <br/>
+    Email     : <input type = "text" th:field  = "*{Owner}"/>
+    <br/>
+    <input type="submit" value="ADD"/>
+    <br/>
+    <br/>
+    <a href="/LogOut"> LogOut</a>
+    <br/>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>stores </title>
+</head>
+<body>
+
+<dev th:each="waitingStores : ${Stores}">
+    <!--/*@thymesVar id="waitingStores" type=""*/-->
+    <a th:href="@{/AcceptWaitingStores(id=${waitingStores.id})}" th:id="${waitingStores.id}" th:name="ID"> <span th:text = "${waitingStores.Name}"> </span> </a>
+    <br/>
+</dev>
+<br/>
+<br/>
+<a href="/LogOut"> LogOut</a>
+<br/>
+</body>
+</html>

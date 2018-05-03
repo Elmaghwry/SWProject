@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>LogIn form</title>
+</head>
+<body>
+<!--/*@thymesVar id="userEntity" type=""*/-->
+<form method= "post"  th:action="@{/Login}" th:object="${userEntity}">
+
+    Email    : <input type="text" th:field="*{Email}"/>
+    <br/>
+    Password : <input type="password" th:field="*{Password}"/>
+    <br/>
+    <input type="submit" value="Login"/>
+    <br/>
+</form>
+</body>
+</html>

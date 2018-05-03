@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+</head>
+<body>
+<!--num of remove    : <input th:type="number" th:name="name" th:value="${card.QuantityRemove}"  />-->
+
+<dev th:each="cart : ${Cart}">
+    <!--/*@thymesVar id="product" type=""*/-->
+    <a th:href="@{/RemoveFromCart(id1=${cart.id},id2=${card.QuantityRemove})}" th:id="${cart.id}" th:name="ID"> <span th:text = "${cart.Name}"> </span><span th:text = "${cart.Quantity}"> </span> </a>
+    <br/>
+</dev>
+<br/>
+<br/>
+<a href="/LogOut"> LogOut</a>
+<br/>
+</body>
+</html>

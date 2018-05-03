@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Add Brand form</title>
+</head>
+<body>
+<!--/*@thymesVar id="store" type=""*/-->
+<form method= "post"  th:action="@{/AddBrand}" th:object="${brandEntity}">
+    Name     : <input type = "text" th:field  = "*{Name}"/>
+    <br/>
+    <input type="submit" value="ADD"/>
+    <br/><br/>
+    <a href="/LogOut"> LogOut</a>
+</form>
+</body>
+</html>
